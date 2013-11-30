@@ -1,0 +1,11 @@
+<h1>Add Manga</h1>
+
+{% if error_msg %}<p><strong>{{ error_msg}}</strong></p>{% endif %}
+
+<form action="{% url 'manga:handle_add' %}" method="post">
+{% csrf_token %}
+Title: <input type="text" name="title" />
+<br>
+Or enter its onemanga.me URL: <input type="url" name="url" />
+<input type="submit" value="Add" />
+</form>

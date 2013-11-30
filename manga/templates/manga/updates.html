@@ -1,0 +1,13 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'manga/style.css' %}" />
+
+{% if update_list %}
+    <ul>
+    {% for update in update_list %}
+        <li><a href={{update.link}}>New chapter for {{update.manga.title}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No new stuff.</p>
+{% endif %}
