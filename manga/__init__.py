@@ -1,5 +1,7 @@
 from tasks.tasks import updateManga
 
 def startup():
-    #updateManga()
-    pass
+    """Tasks to run on server startup."""
+    
+    #Search for new chapters
+    updateManga()

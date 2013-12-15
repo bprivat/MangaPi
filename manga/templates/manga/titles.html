@@ -1,7 +1,7 @@
 {% if mangaList %}
 	<a href="{% url 'manga:add_manga' %}">Add Manga</a>
     <ul>
-    {% for manga in mangaList %}
+    {% for manga in manga_list %}
         <!-- <img src={{ manga.image.url }}"/> TODO: add back in when nginx is up//--> <li><a href="{% url 'manga:manga_detail' manga.id %}">{{ manga.title }}</a></li>
     {% endfor %}
     </ul>
